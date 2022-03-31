@@ -19,6 +19,9 @@ fun main() {
         println("Material: ${buildingMaterial}")
         println("Capacity: ${capacity}")
         println("Has room? ${hasRoom()}")
+        getRoom()
+        println("Has room? ${hasRoom()}")
+        getRoom()
         println("Floor area: %.2f".format(floorArea()))
     }
 
@@ -41,6 +44,15 @@ abstract class Dwelling(private var residents: Int) {
    }
 
    abstract fun floorArea(): Double
+
+   fun getRoom() {
+       if (capacity > residents) {
+           residents++
+           println("You got a room!")
+       } else {
+           println("Sorry, at capacity and no rooms left.")
+       }
+   }
 }
 
 class SquareCabin(
