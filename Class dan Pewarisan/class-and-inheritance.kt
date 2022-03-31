@@ -1,4 +1,5 @@
 fun main() {
+    
     val squareCabin = SquareCabin(6)
     val roundHut = RoundHut(3)
     val roundTower = RoundTower(4)
@@ -45,7 +46,10 @@ open class RoundHut(residents: Int) : Dwelling(residents) {
     override val capacity = 4
 }
 
-class RoundTower(residents: Int) : RoundHut(residents) {
+class RoundTower(
+    residents: Int,
+    val floors: Int = 2) : RoundHut(residents) {
+
     override val buildingMaterial = "Stone"
-    override val capacity = 4
+    override val capacity = 4 * floors
 }
