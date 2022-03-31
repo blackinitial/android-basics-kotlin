@@ -11,7 +11,7 @@ fun main() {
         println("Material: ${buildingMaterial}")
         println("Capacity: ${capacity}")
         println("Has room? ${hasRoom()}")
-        println("Floor area: ${floorArea()}")
+        println("Floor area: %.2f".format(floorArea()))
     }
 
     with(roundHut) {
@@ -19,7 +19,7 @@ fun main() {
         println("Material: ${buildingMaterial}")
         println("Capacity: ${capacity}")
         println("Has room? ${hasRoom()}")
-        println("Floor area: ${floorArea()}")
+        println("Floor area: %.2f".format(floorArea()))
     }
 
     with(roundTower) {
@@ -27,7 +27,7 @@ fun main() {
         println("Material: ${buildingMaterial}")
         println("Capacity: ${capacity}")
         println("Has room? ${hasRoom()}")
-        println("Floor area: ${floorArea()}")
+        println("Floor area: %.2f".format(floorArea()))
     }
 }
 
