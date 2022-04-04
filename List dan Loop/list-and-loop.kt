@@ -16,6 +16,19 @@ class Vegetables(vararg val toppings: String) : Item("Vegetables", 5) {
   }
 }
 
+class Order(val orderNumber: Int) {
+   private val itemList = mutableListOf<Item>()
+
+   fun addItem(newItem: Item) {
+   }
+
+   fun addAll(newItems: List<Item>) {
+   }
+
+   fun print() {
+   }
+}
+
 fun main() {
   val noodles = Noodles()
   val vegetables = Vegetables("Cabbage", "Sprouts", "Onion")
