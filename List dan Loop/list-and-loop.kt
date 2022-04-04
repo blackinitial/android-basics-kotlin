@@ -6,7 +6,7 @@ class Noodles : Item("Noodles", 10) {
   }
 }
 
-class Vegetables : Item("Vegetables", 5) {
+class Vegetables(val toppings: List<String>) : Item("Vegetables", 5) {
   override fun toString(): String {
     return name
   }
@@ -14,7 +14,7 @@ class Vegetables : Item("Vegetables", 5) {
 
 fun main() {
   val noodles = Noodles()
-  val vegetables = Vegetables()
+  val vegetables = Vegetables("Cabbage", "Sprouts", "Onion")
   println(noodles)
   println(vegetables)
 }
